@@ -38,9 +38,6 @@ import es.usc.citius.hipster.model.function.NodeExpander;
  *            class defining the action
  * @param <S>
  *            class defining the state
- * @param <C>
- *            class defining the cost, must implement
- *            {@link java.lang.Comparable}
  * @param <N>
  *            type of the nodes
  * 
@@ -61,9 +58,11 @@ public class AnnealingSearch<A, S, N extends HeuristicNode<A, S, Double, N>> ext
 	private SuccessorFinder<A, S, N> successorFinder;
 	// expander to find all the successors of a given node.
 	private NodeExpander<A, S, N> nodeExpander;
+	private Random randIndGen;
 
 	public AnnealingSearch(N initialNode, NodeExpander<A, S, N> nodeExpander, Double alpha, Double minTemp,
 			AcceptanceProbability acceptanceProbability, SuccessorFinder<A, S, N> successorFinder) {
+		this.randIndGen = new Random();
 		if (initialNode == null) {
 			throw new IllegalArgumentException("Provide a valid initial node");
 		}
@@ -103,6 +102,7 @@ public class AnnealingSearch<A, S, N extends HeuristicNode<A, S, Double, N>> ext
 		} else {
 			// default implementation of the successor: picks up a successor
 			// randomly
+			final Random rnd = this.randIndGen;
 			this.successorFinder = new SuccessorFinder<A, S, N>() {
 				@Override
 				public N estimate(N node, NodeExpander<A, S, N> nodeExpander) {
@@ -112,7 +112,7 @@ public class AnnealingSearch<A, S, N extends HeuristicNode<A, S, Double, N>> ext
 						successors.add(successor);
 					}
 					Random randIndGen = new Random();
-					return successors.get(Math.abs(randIndGen.nextInt()) % successors.size());
+					return successors.get(Math.abs(rnd.nextInt()) % successors.size());
 				}
 			};
 		}
@@ -192,10 +192,6 @@ public class AnnealingSearch<A, S, N extends HeuristicNode<A, S, Double, N>> ext
 	 * @param <N>
 	 */
 	public interface SuccessorFinder<A, S, N extends Node<A, S, N>> {
-		/**
-		 * @param Node
-		 * @return the successor of a node.
-		 */
 		N estimate(N node, NodeExpander<A, S, N> nodeExpander);
 	}
 }
