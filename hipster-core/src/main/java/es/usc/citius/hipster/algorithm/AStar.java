@@ -142,7 +142,6 @@ public class AStar<A,S,C extends Comparable<C>,N extends HeuristicNode<A,S,C,N>>
         /**
          * Remove is not supported
          */
-        @Override
         public void remove() {
             throw new UnsupportedOperationException();
         }

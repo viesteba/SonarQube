@@ -224,6 +224,7 @@ public class ADStarForward<A,S,C extends Comparable<C>, N extends es.usc.citius.
             if (minGoal.compareTo(current) >= 0 || minGoal.getV().compareTo(minGoal.getG()) < 0) {
                 //s removed from OPEN
                 open.remove(state);
+                //this.queue.remove(current);
                 //if v(s) > g(s)
                 boolean consistent = current.isConsistent();
                 if (consistent) {
