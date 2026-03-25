@@ -35,38 +35,38 @@ public abstract class RomaniaProblemOptimalSearchTest {
     protected List<? extends Node<Void, RomanianProblem.City, ?>> optimalPathSearchMethod;
     protected List<RomanianProblem.City> optimalPath;
     protected final HashMap<RomanianProblem.City, Double> costsFromArad;
-    protected static final RomanianProblem.City GOAL = RomanianProblem.City.Bucharest;
+    protected static final RomanianProblem.City GOAL = RomanianProblem.City.BUCHAREST;
 
     public RomaniaProblemOptimalSearchTest(){
         costsFromArad = new HashMap<RomanianProblem.City, Double>();
-        costsFromArad.put(RomanianProblem.City.Arad, 0d);
-        costsFromArad.put(RomanianProblem.City.Zerind, 75d);
-        costsFromArad.put(RomanianProblem.City.Timisoara, 118d);
-        costsFromArad.put(RomanianProblem.City.Sibiu, 140d);
-        costsFromArad.put(RomanianProblem.City.Oradea, 146d);
-        costsFromArad.put(RomanianProblem.City.Fagaras, 239d);
-        costsFromArad.put(RomanianProblem.City.Rimnicu_Vilcea, 220d);
-        costsFromArad.put(RomanianProblem.City.Craiova, 366d);
-        costsFromArad.put(RomanianProblem.City.Pitesti, 317d);
-        costsFromArad.put(RomanianProblem.City.Bucharest, 418d);
-        costsFromArad.put(RomanianProblem.City.Lugoj, 229d);
-        costsFromArad.put(RomanianProblem.City.Mehadia, 299d);
-        costsFromArad.put(RomanianProblem.City.Drobeta, 374d);
-        costsFromArad.put(RomanianProblem.City.Giurgiu, 508d);
-        costsFromArad.put(RomanianProblem.City.Urziceni, 503d);
-        costsFromArad.put(RomanianProblem.City.Hirsova, 601d);
-        costsFromArad.put(RomanianProblem.City.Eforie, 687d);
-        costsFromArad.put(RomanianProblem.City.Vaslui, 645d);
-        costsFromArad.put(RomanianProblem.City.Iasi, 737d);
-        costsFromArad.put(RomanianProblem.City.Neamt, 824d);
+        costsFromArad.put(RomanianProblem.City.ARAD, 0d);
+        costsFromArad.put(RomanianProblem.City.ZERIND, 75d);
+        costsFromArad.put(RomanianProblem.City.TIMISOARA, 118d);
+        costsFromArad.put(RomanianProblem.City.SIBIU, 140d);
+        costsFromArad.put(RomanianProblem.City.ORADEA, 146d);
+        costsFromArad.put(RomanianProblem.City.FAGARAS, 239d);
+        costsFromArad.put(RomanianProblem.City.RIMNICU_VILCEA, 220d);
+        costsFromArad.put(RomanianProblem.City.CRAIOVA, 366d);
+        costsFromArad.put(RomanianProblem.City.PITESTI, 317d);
+        costsFromArad.put(RomanianProblem.City.BUCHAREST, 418d);
+        costsFromArad.put(RomanianProblem.City.LUGOJ, 229d);
+        costsFromArad.put(RomanianProblem.City.MEHADIA, 299d);
+        costsFromArad.put(RomanianProblem.City.DROBETA, 374d);
+        costsFromArad.put(RomanianProblem.City.GIURGIU, 508d);
+        costsFromArad.put(RomanianProblem.City.URZICENI, 503d);
+        costsFromArad.put(RomanianProblem.City.HIRSOVA, 601d);
+        costsFromArad.put(RomanianProblem.City.EFORIE, 687d);
+        costsFromArad.put(RomanianProblem.City.VASLUI, 645d);
+        costsFromArad.put(RomanianProblem.City.IASI, 737d);
+        costsFromArad.put(RomanianProblem.City.NEAMT, 824d);
 
         optimalPath =
                 Arrays.asList(
-                        RomanianProblem.City.Arad,
-                        RomanianProblem.City.Sibiu,
-                        RomanianProblem.City.Rimnicu_Vilcea,
-                        RomanianProblem.City.Pitesti,
-                        RomanianProblem.City.Bucharest
+                        RomanianProblem.City.ARAD,
+                        RomanianProblem.City.SIBIU,
+                        RomanianProblem.City.RIMNICU_VILCEA,
+                        RomanianProblem.City.PITESTI,
+                        RomanianProblem.City.BUCHAREST
                 );
     }
 
@@ -134,7 +134,7 @@ public abstract class RomaniaProblemOptimalSearchTest {
         Algorithm<Void, RomanianProblem.City, ? extends Node<Void, RomanianProblem.City, ?>> algorithm = createAlgorithm();
         //execute iterative search
         this.optimalPathIterator = iterativeSearch(algorithm.iterator());
-        this.optimalPathSearchMethod = algorithm.search(RomanianProblem.City.Bucharest).getGoalNode().path();
+        this.optimalPathSearchMethod = algorithm.search(RomanianProblem.City.BUCHAREST).getGoalNode().path();
     };
 
     /**

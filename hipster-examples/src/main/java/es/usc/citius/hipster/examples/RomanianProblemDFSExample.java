@@ -41,7 +41,7 @@ public class RomanianProblemDFSExample {
                 /*
                     Here we set the start of the search problem to the city Arad.
                  */
-                .startingFrom(RomanianProblem.City.Arad)
+                .startingFrom(RomanianProblem.City.ARAD)
 
                 /*
                     Defines the graph which is used as source to instantiate this GraphSearchProblem. Here
@@ -69,7 +69,7 @@ public class RomanianProblemDFSExample {
          * In this example the search is executed using Depth First Search (DFS) with the goal Bucharest.
          * Search will stop when the algorithm explores that node. Results of the search are printed.
          */
-        System.out.println(Hipster.createDepthFirstSearch(problem).search(RomanianProblem.City.Bucharest));
+        System.out.println(Hipster.createDepthFirstSearch(problem).search(RomanianProblem.City.BUCHAREST));
     }
 
 }

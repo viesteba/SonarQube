@@ -9,13 +9,13 @@
         <!-- Site config -->
         <site.url>http://hipster4j.org</site.url>
         <!-- Hipster version -->
-        <hipster.version>1.0.3-SNAPSHOT</hipster.version>
+        <hipster.version>1.0.2-SNAPSHOT</hipster.version>
     </properties>
 
     <groupId>es.usc.citius.hipster</groupId>
     <artifactId>hipster-pom</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <name>hipster-pom</name>
     <url>${site.url}</url>
@@ -123,24 +123,7 @@
                         <encoding>UTF-8</encoding>
                         <docencoding>UTF-8</docencoding>
                         <charset>UTF-8</charset>
-                        <!-- Doclava specific configuration -->
-                        <docletArtifact>
-                            <groupId>com.google.doclava</groupId>
-                            <artifactId>doclava</artifactId>
-                            <version>1.0.6</version>
-                        </docletArtifact>
-                        <doclet>com.google.doclava.Doclava</doclet>
-                        <bootclasspath>${sun.boot.class.path}</bootclasspath>
-                        <additionalparam>
-                            -federate JDK http://download.oracle.com/javase/6/docs/api/index.html?
-                            -federationxml JDK http://doclava.googlecode.com/svn/static/api/openjdk-6.xml
-                            -hdf project.name "${project.name}"
-                            -templatedir ${hipster.root.dir}/src/main/doclava/custom/assets/hipster-template/
-                            -d ${project.build.directory}/apidocs
-                        </additionalparam>
-                        <useStandardDocletOptions>false</useStandardDocletOptions>
-                        <additionalJOption>-J-Xmx1024m</additionalJOption>
-                        <docfilessubdirs>true</docfilessubdirs>
+
                     </configuration>
                 </plugin>
                 <plugin>

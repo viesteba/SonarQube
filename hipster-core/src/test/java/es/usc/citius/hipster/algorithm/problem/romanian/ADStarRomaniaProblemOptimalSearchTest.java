@@ -22,8 +22,8 @@ public class ADStarRomaniaProblemOptimalSearchTest extends RomaniaProblemOptimal
     @Override
     public Algorithm<Void, RomanianProblem.City, ? extends Node<Void, RomanianProblem.City, ?>> createAlgorithm() {
         //initialize search problem
-        SearchComponents components = GraphSearchProblem.startingFrom(RomanianProblem.City.Arad)
-                .goalAt(RomanianProblem.City.Bucharest)
+        SearchComponents components = GraphSearchProblem.startingFrom(RomanianProblem.City.ARAD)
+                .goalAt(RomanianProblem.City.BUCHAREST)
                 .in(graph)
                 .takeCostsFromEdges()
                 .useHeuristicFunction(RomanianProblem.heuristicFunction())

@@ -47,7 +47,7 @@ public class RomanianProblemExample {
                 /*
                     Here we set the start of the search problem to the city Arad.
                  */
-                .startingFrom(RomanianProblem.City.Arad)
+                .startingFrom(RomanianProblem.City.ARAD)
 
                 /*
                     Defines the graph which is used as source to instantiate this GraphSearchProblem. Here
@@ -81,7 +81,7 @@ public class RomanianProblemExample {
          * In this example the search is executed using A* with with the goal set to Bucharest.
          * Search will stop when the algorithm explores that node. Results of the search are printed.
          */
-        System.out.println(Hipster.createAStar(problem).search(RomanianProblem.City.Bucharest));
+        System.out.println(Hipster.createAStar(problem).search(RomanianProblem.City.BUCHAREST));
     }
 
 }

@@ -22,7 +22,7 @@ public class BellmanFordRomaniaProblemOptimalSearchTest extends RomaniaProblemOp
     @Override
     public Algorithm<Void, RomanianProblem.City, ? extends Node<Void, RomanianProblem.City, ?>> createAlgorithm() {
         SearchProblem p = GraphSearchProblem
-                .startingFrom(RomanianProblem.City.Arad)
+                .startingFrom(RomanianProblem.City.ARAD)
                 .in(graph)
                 .takeCostsFromEdges()
                 .build();

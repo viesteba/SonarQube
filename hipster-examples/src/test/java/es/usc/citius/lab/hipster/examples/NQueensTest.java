@@ -29,19 +29,19 @@ public class NQueensTest {
 
     @Test
     public void test8QueenZeroAttacked() throws Exception {
-        int solution[]={3,6,2,7,1,4,0,5};
+        int [] solution={3,6,2,7,1,4,0,5};
         assertEquals(0, new NQueens(solution).attackedQueens());
     }
 
     @Test
     public void test8QueenSameColumnDiagonalAttacked() throws Exception {
-        int solution[]={3,6,3,7,1,4,0,5};
+        int [] solution={3,6,3,7,1,4,0,5};
         assertEquals(3, new NQueens(solution).attackedQueens());
     }
 
     @Test
     public void test8QueenSameColumnAttacked() throws Exception {
-        int solution[]={3,6,2,7,1,4,2,5};
+        int [] solution={3,6,2,7,1,4,2,5};
         assertEquals(2, new NQueens(solution).attackedQueens());
     }
 

@@ -27,6 +27,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.NoSuchElementException;
 
 /**
  * <p>Iterative implementation of the forward Anytime Dynamic A* (AD*-f) search algorithm.</p>

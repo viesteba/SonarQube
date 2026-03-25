@@ -20,19 +20,19 @@ public abstract class RomaniaProblemOptimalHeuristicSearchTest extends RomaniaPr
         super();
         //obtain score map for expanding nodes to Bucharest
         scoresFromArad = new HashMap<RomanianProblem.City, Double>();
-        scoresFromArad.put(RomanianProblem.City.Arad, 366d);
-        scoresFromArad.put(RomanianProblem.City.Zerind, 449d);
-        scoresFromArad.put(RomanianProblem.City.Timisoara, 447d);
-        scoresFromArad.put(RomanianProblem.City.Sibiu, 393d);
-        scoresFromArad.put(RomanianProblem.City.Oradea, 526d);
-        scoresFromArad.put(RomanianProblem.City.Fagaras, 415d);
-        scoresFromArad.put(RomanianProblem.City.Rimnicu_Vilcea, 413d);
-        scoresFromArad.put(RomanianProblem.City.Craiova, 526d);
-        scoresFromArad.put(RomanianProblem.City.Pitesti, 417d);
-        scoresFromArad.put(RomanianProblem.City.Bucharest, 418d);
-        scoresFromArad.put(RomanianProblem.City.Lugoj, 473d);
-        scoresFromArad.put(RomanianProblem.City.Mehadia, 540d);
-        scoresFromArad.put(RomanianProblem.City.Drobeta, 616d);
+        scoresFromArad.put(RomanianProblem.City.ARAD, 366d);
+        scoresFromArad.put(RomanianProblem.City.ZERIND, 449d);
+        scoresFromArad.put(RomanianProblem.City.TIMISOARA, 447d);
+        scoresFromArad.put(RomanianProblem.City.SIBIU, 393d);
+        scoresFromArad.put(RomanianProblem.City.ORADEA, 526d);
+        scoresFromArad.put(RomanianProblem.City.FAGARAS, 415d);
+        scoresFromArad.put(RomanianProblem.City.RIMNICU_VILCEA, 413d);
+        scoresFromArad.put(RomanianProblem.City.CRAIOVA, 526d);
+        scoresFromArad.put(RomanianProblem.City.PITESTI, 417d);
+        scoresFromArad.put(RomanianProblem.City.BUCHAREST, 418d);
+        scoresFromArad.put(RomanianProblem.City.LUGOJ, 473d);
+        scoresFromArad.put(RomanianProblem.City.MEHADIA, 540d);
+        scoresFromArad.put(RomanianProblem.City.DROBETA, 616d);
     }
 
     /**

@@ -23,7 +23,7 @@ public class IDAStarRomaniaProblemOptimalSearchTest extends RomaniaProblemOptima
     public Algorithm<Void, RomanianProblem.City, ? extends Node<Void, RomanianProblem.City, ?>> createAlgorithm() {
         //initialize search problem
         SearchProblem p = GraphSearchProblem
-                .startingFrom(RomanianProblem.City.Arad)
+                .startingFrom(RomanianProblem.City.ARAD)
                 .in(graph)
                 .takeCostsFromEdges()
                 .useHeuristicFunction(RomanianProblem.heuristicFunction())

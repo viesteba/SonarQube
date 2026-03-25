@@ -40,11 +40,11 @@ public class RomanianProblemGraph {
 
     @Test
     public void testAradRoads() {
-        Set<GraphEdge<RomanianProblem.City, Double>> roads = Sets.newHashSet(graph.edgesOf(RomanianProblem.City.Arad));
+        Set<GraphEdge<RomanianProblem.City, Double>> roads = Sets.newHashSet(graph.edgesOf(RomanianProblem.City.ARAD));
         Set<GraphEdge<RomanianProblem.City, Double>> expected = new HashSet<>();
-        expected.add(new UndirectedEdge<RomanianProblem.City, Double>(RomanianProblem.City.Arad, RomanianProblem.City.Zerind, 75d));
-        expected.add(new UndirectedEdge<RomanianProblem.City, Double>(RomanianProblem.City.Arad, RomanianProblem.City.Sibiu, 140d));
-        expected.add(new UndirectedEdge<RomanianProblem.City, Double>(RomanianProblem.City.Arad, RomanianProblem.City.Timisoara, 118d));
+        expected.add(new UndirectedEdge<RomanianProblem.City, Double>(RomanianProblem.City.ARAD, RomanianProblem.City.ZERIND, 75d));
+        expected.add(new UndirectedEdge<RomanianProblem.City, Double>(RomanianProblem.City.ARAD, RomanianProblem.City.SIBIU, 140d));
+        expected.add(new UndirectedEdge<RomanianProblem.City, Double>(RomanianProblem.City.ARAD, RomanianProblem.City.TIMISOARA, 118d));
         assertEquals(expected, roads);
     }
 }
