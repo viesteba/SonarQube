@@ -186,7 +186,7 @@ public class BlueprintsGraphMultiobjectiveSearch {
                 if (c1 < o.c1 || c2 < o.c2){
                     return -1;
                 }
-            } else if (o.c1 <= c1 && o.c2 <= o.c2){
+            } else if (o.c1 <= c1 && o.c2 <= c2){
                 if (o.c1 < c1 || o.c2 < c2){
                     return 1;
                 }
