@@ -45,7 +45,7 @@ public class HashTableHipsterDirectedGraphTest extends HashTableHipsterGraphTest
     }
 
     @Test
-    public void testConnect() throws Exception {
+    public void testConnect(){
         directedGraph.connect("F", "G", 1d);
         assertEquals("F", directedGraph.incomingEdgesOf("G").iterator().next().getVertex1());
     }
