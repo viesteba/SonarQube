@@ -51,7 +51,7 @@ public class HashTableHipsterDirectedGraphTest extends HashTableHipsterGraphTest
     }
 
     @Test
-    public void testOutgoingEdgesOf() throws Exception {
+    public void testOutgoingEdgesOf(){
         Set<DirectedEdge<String, Double>> expected = new HashSet<DirectedEdge<String, Double>>();
         expected.add(new DirectedEdge<String, Double>("B", "C", 5d));
         expected.add(new DirectedEdge<String, Double>("B", "D", 10d));
@@ -59,7 +59,7 @@ public class HashTableHipsterDirectedGraphTest extends HashTableHipsterGraphTest
     }
 
     @Test
-    public void testIncomingEdgesOf() throws Exception {
+    public void testIncomingEdgesOf(){
         Set<DirectedEdge<String, Double>> expected = new HashSet<DirectedEdge<String, Double>>();
         expected.add(new DirectedEdge<String, Double>("B", "C", 5d));
         expected.add(new DirectedEdge<String, Double>("A", "C", 2d));
@@ -68,7 +68,7 @@ public class HashTableHipsterDirectedGraphTest extends HashTableHipsterGraphTest
 
     @Test
     @Override
-    public void testEdges() throws Exception {
+    public void testEdges(){
         Set<DirectedEdge<String, Double>> expected = new HashSet<DirectedEdge<String, Double>>();
         expected.add(new DirectedEdge<String, Double>("A", "B", 4d));
         expected.add(new DirectedEdge<String, Double>("A", "C", 2d));
@@ -82,7 +82,7 @@ public class HashTableHipsterDirectedGraphTest extends HashTableHipsterGraphTest
 
     @Test
     @Override
-    public void testEdgesOf() throws Exception {
+    public void testEdgesOf(){
         Set<DirectedEdge<String,Double>> expected = new HashSet<DirectedEdge<String, Double>>();
         expected.add(new DirectedEdge<String, Double>("B", "D", 10d));
         expected.add(new DirectedEdge<String, Double>("A", "B", 4d));

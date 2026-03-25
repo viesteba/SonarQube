@@ -31,7 +31,7 @@ public class HashBasedHipsterDirectedGraphTest {
     }
 
     @Test
-    public void testOutgoingEdgesOf() throws Exception {
+    public void testOutgoingEdgesOf(){
         for(int i=0; i<size; i++) {
             Set edges = Sets.newHashSet(graph.outgoingEdgesOf("v"+i));
             assertEquals(size-(i+1), edges.size());
@@ -39,7 +39,7 @@ public class HashBasedHipsterDirectedGraphTest {
     }
 
     @Test
-    public void testIncomingEdgesOf() throws Exception {
+    public void testIncomingEdgesOf(){
         for(int i=0; i<size; i++) {
             Set edges = Sets.newHashSet(graph.incomingEdgesOf("v"+i));
             assertEquals(i, edges.size());
@@ -47,7 +47,7 @@ public class HashBasedHipsterDirectedGraphTest {
     }
 
     @Test
-    public void testEdges() throws Exception {
+    public void testEdges(){
         Set edges = Sets.newHashSet(graph.edges());
         assertEquals(size*(size-1)/2, edges.size());
     }

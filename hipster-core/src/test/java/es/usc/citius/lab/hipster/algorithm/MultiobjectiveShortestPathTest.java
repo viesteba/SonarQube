@@ -23,7 +23,6 @@ import es.usc.citius.hipster.model.function.BinaryFunction;
 import es.usc.citius.hipster.model.function.impl.BinaryOperation;
 import es.usc.citius.hipster.graph.HipsterDirectedGraph;
 import org.junit.Test;
-import es.usc.citius.hipster.algorithm.Algorithm.SearchResult;
 
 /**
  * @author Pablo Rodríguez Mier <<a href="mailto:pablo.rodriguez.mier@usc.es">pablo.rodriguez.mier@usc.es</a>>

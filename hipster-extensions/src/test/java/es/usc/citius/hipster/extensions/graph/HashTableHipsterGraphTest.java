@@ -46,13 +46,13 @@ public class HashTableHipsterGraphTest {
     }
 
     @Test
-    public void testAdd() throws Exception {
+    public void testAdd(){
         graph.add("G");
         assertTrue(Sets.newHashSet(graph.vertices()).contains("G"));
     }
 
     @Test
-    public void testRemove() throws Exception {
+    public void testRemove(){
         graph.remove("B");
         assertFalse(Sets.newHashSet(graph.vertices()).contains("B"));
     }
@@ -70,7 +70,7 @@ public class HashTableHipsterGraphTest {
     }
 
     @Test
-    public void testEdges() throws Exception {
+    public void testEdges(){
         Set<GraphEdge<String,Double>> expected = new HashSet<GraphEdge<String, Double>>();
         expected.add(new UndirectedEdge<String, Double>("A","B",4d));
         expected.add(new UndirectedEdge<String, Double>("A","C",2d));
@@ -83,13 +83,13 @@ public class HashTableHipsterGraphTest {
     }
 
     @Test
-    public void testVertices() throws Exception {
+    public void testVertices(){
         Set<String> expected = Sets.newHashSet("A","B","C","D","E","F");
         assertEquals(expected, graph.vertices());
     }
 
     @Test
-    public void testEdgesOf() throws Exception {
+    public void testEdgesOf(){
         Set<GraphEdge<String,Double>> expected = new HashSet<GraphEdge<String, Double>>();
         expected.add(new UndirectedEdge<String, Double>("B","D",10d));
         expected.add(new UndirectedEdge<String, Double>("A","B",4d));

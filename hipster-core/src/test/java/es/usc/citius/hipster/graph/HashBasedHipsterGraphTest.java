@@ -54,7 +54,7 @@ public class HashBasedHipsterGraphTest {
     }
 
     @Test
-    public void testAdd() throws Exception {
+    public void testAdd(){
         graph.add("X");
         Set vertices = Sets.newHashSet(graph.vertices());
         assertTrue(vertices.contains("X"));
@@ -62,13 +62,13 @@ public class HashBasedHipsterGraphTest {
     }
 
     @Test
-    public void testRemove() throws Exception {
+    public void testRemove(){
         graph.remove("v1");
         assertFalse(Sets.newHashSet(graph.vertices()).contains("v1"));
     }
 
     @Test
-    public void testRemoveAndCheckEdges() throws Exception {
+    public void testRemoveAndCheckEdges(){
         graph.remove("v1");
         assertFalse(Sets.newHashSet(graph.vertices()).contains("v1"));
         Iterable<GraphEdge> edges = graph.edges();
@@ -81,7 +81,7 @@ public class HashBasedHipsterGraphTest {
     }
 
     @Test
-    public void testConnect() throws Exception {
+    public void testConnect(){
         graph.add("X");
         graph.add("Y");
         graph.connect("X","Y",1.0d);
@@ -91,13 +91,13 @@ public class HashBasedHipsterGraphTest {
 
 
     @Test
-    public void testVertices() throws Exception {
+    public void testVertices(){
         Set vertices = Sets.newHashSet(graph.vertices());
         assertEquals(size, vertices.size());
     }
 
     @Test
-    public void testEdgesOf() throws Exception {
+    public void testEdgesOf(){
         Set edges = Sets.newHashSet(graph.edgesOf("v1"));
         assertEquals(size-1, edges.size());
     }

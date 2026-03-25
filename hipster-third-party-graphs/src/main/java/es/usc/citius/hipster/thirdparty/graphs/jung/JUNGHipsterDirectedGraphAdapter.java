@@ -21,7 +21,6 @@ import edu.uci.ics.jung.graph.Graph;
 import es.usc.citius.hipster.graph.GraphEdge;
 import es.usc.citius.hipster.graph.HipsterDirectedGraph;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
