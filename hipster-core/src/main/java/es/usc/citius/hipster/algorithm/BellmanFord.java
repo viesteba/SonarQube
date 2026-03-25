@@ -21,10 +21,7 @@ import es.usc.citius.hipster.model.function.NodeExpander;
 import es.usc.citius.hipster.util.Predicate;
 import es.usc.citius.lab.hipster.collections.HashQueue;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * <p>
@@ -103,6 +100,9 @@ public class BellmanFord<A,S,C extends Comparable<C>,N extends CostNode<A,S,C,N>
 
         @Override
         public N next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             // Take the next node
             N currentNode = dequeue();
             if (checkNegativeCycles && currentNode.pathSize() > explored.size()){

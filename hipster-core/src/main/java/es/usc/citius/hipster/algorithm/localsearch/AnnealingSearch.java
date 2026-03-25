@@ -1,11 +1,6 @@
 package es.usc.citius.hipster.algorithm.localsearch;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Random;
+import java.util.*;
 
 import es.usc.citius.hipster.algorithm.Algorithm;
 import es.usc.citius.hipster.model.HeuristicNode;
@@ -147,6 +142,9 @@ public class AnnealingSearch<A, S, N extends HeuristicNode<A, S, Double, N>> ext
 
 		@Override
 		public N next() {
+			if (!hasNext()) {
+				throw new NoSuchElementException();
+			}
 			N currentNode = this.queue.poll();
 			if (curTemp > minTemp) {
 				N newNode = null;

@@ -20,6 +20,7 @@ import es.usc.citius.lab.hipster.collections.FibonacciHeap;
 
 import java.util.AbstractQueue;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
  * Implementation of {@link java.util.Queue} based on the Fibonacci heap
@@ -47,6 +48,9 @@ public class PriorityFibonacciQueue<N> extends AbstractQueue<N> {
 
             @Override
             public N next() {
+                if (!hasNext()) {
+                    throw new NoSuchElementException();
+                }
                 return heap.dequeueMin().getValue();
             }
 

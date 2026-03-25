@@ -25,6 +25,7 @@ import es.usc.citius.hipster.model.function.NodeExpander;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 import java.util.Queue;
 
 /**
@@ -89,6 +90,9 @@ public class HillClimbing<A,S,C extends Comparable<C>,N extends HeuristicNode<A,
 
         @Override
         public N next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             N current = this.queue.poll();
             N bestNode = null;
             // Generate successors

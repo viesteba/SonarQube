@@ -19,10 +19,7 @@ package es.usc.citius.hipster.algorithm;
 import es.usc.citius.hipster.model.Node;
 import es.usc.citius.hipster.model.function.NodeExpander;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * <p>
@@ -70,6 +67,9 @@ public class BreadthFirstSearch<A,S,N extends Node<A,S,N>> extends Algorithm<A,S
 
         @Override
         public N next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             // Take next node
             N current = queue.poll();
             for(N successorNode : expander.expand(current)){
